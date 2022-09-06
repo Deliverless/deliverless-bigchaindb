@@ -1,0 +1,21 @@
+{
+  "_id": "DRVR1",
+  "name": "Jim Fellow",
+  "email": "jfellow@gmail.com",
+  "password": "dnu32y75yhuribewygv8237i8hrn3oin89h80hodb",
+  "car": "2016 Ford Focus",
+  "pic": "https://preview.redd.it/tqa74wso0f3z.png?auto=webp&s=9f9b436138829820aabbadc0287c00d3d329aa4d",
+  "rating": "3.8",
+  "payment": [
+    {
+      "type": "visa",
+      "cardno": "918100881442",
+      "securityCode": "345",
+      "expiry": "06/23"
+    }
+  ],
+  "licencePlate": "CDUA 199",
+  "phone": "9056901224",
+  "orders": ["ORDR1"],
+  "reviews": []
+}

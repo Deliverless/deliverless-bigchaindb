@@ -1,0 +1,15 @@
+{
+  "_id": "ITEM1",
+  "name": "Burrito",
+  "size": "large",
+  "category": "Mains",
+  "img": "https://static.onecms.io/wp-content/uploads/sites/19/2018/05/21/chicken-fried-rice-burrito-dcms-large-image-2000.jpg",
+  "description": "soft, warm tortilla wrapped to contain a number of fillings including rice, beans and chicken or beef.",
+  "options": [
+    { "name": "corn", "price": "0.50", "selected": false },
+    { "name": "salsa", "price": "0.50", "selected": true },
+    { "name": "cheese", "price": "0.00", "selected": false }
+  ],
+  "price": "10.31",
+  "restaurantID": "REST1"
+}
