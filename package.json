@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/bigchaindb-driver.js"
+    "test": "node tests/bigchaindb-driver.js"
   },
   "repository": {
     "type": "git",
