@@ -1,0 +1,25 @@
+{
+  "name": "deliverless-bigchaindb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/bigchaindb-driver.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deliverless/deliverless-bigchaindb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Deliverless/deliverless-bigchaindb/issues"
+  },
+  "homepage": "https://github.com/Deliverless/deliverless-bigchaindb#readme",
+  "devDependencies": {
+    "bigchaindb-driver": "^4.3.0"
+  }
+}
