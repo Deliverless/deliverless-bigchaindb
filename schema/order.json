@@ -1,16 +1,19 @@
 {
-  "userID": "",
-  "driverID": "",
-  "restaurantID": "",
-  "transactionID": "",
-  "deliveryID": "",
+  "userId": "",
+  "driverId": "",
+  "restaurantId": "",
+  "transactionId": "",
+  "delivery": {
+    "addressId": "",
+    "is-pickup": ""
+  },
   "status": "",
   "discount": "",
   "tax": "",
   "driverFee": "",
   "subtotal": "",
   "total": "",
-  "timePlaced": "",
+  "timestamp": "",
   "sessionId": "",
   "items": []
 }

@@ -5,5 +5,9 @@
   "category": "",
   "imgs": [],
   "options": [],
-  "price": ""
+  "price": "",
+  "quantity": "",
+  "discount": "",
+  "is-pickup-only": false,
+  "is-available": false
 }
