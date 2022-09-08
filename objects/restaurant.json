@@ -22,5 +22,7 @@
   "foods": ["ITEM1"],
   "orders": ["ORDR1"],
   "reviews": [],
-  "image": "https://images.squarespace-cdn.com/content/v1/578ce85a29687f705d94f1a2/1533268082201-46YNRM7B1AM67XM8MMKM/OrderHereSign.jpg?format=1500w"
+  "image": "https://images.squarespace-cdn.com/content/v1/578ce85a29687f705d94f1a2/1533268082201-46YNRM7B1AM67XM8MMKM/OrderHereSign.jpg?format=1500w",
+  "keypair": {},
+  "asset_id": ""
 }

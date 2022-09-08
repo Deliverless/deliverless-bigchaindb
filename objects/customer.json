@@ -3,14 +3,11 @@
   "firstName": "Sam",
   "lastName": "Belbeck",
   "email": "sb@gmail.com",
-  "password": "fncewnasflsjwpoae2bwefuojwadp423q4ecwrex2q31fecr32",
   "phone": "9052611111",
   "payment": [
     {
-      "type": "visa",
-      "cardno": "918100881445",
-      "securityCode": "555",
-      "expiry": "06/23"
+      "id": "PMT_815adaf8-4f8b-43bd-934d-d9fd086897f2",
+      "entry_mode": "ECOM"
     }
   ],
   "address": [
@@ -18,5 +15,9 @@
     { "number": "410", "street": "Morris Park Ave", "postalcode": "L8E7R1" }
   ],
   "birthday": "1999/01/01",
-  "orders": ["ORDR1"]
+  "orders": ["ORDR1"],
+  "role":"",
+  "encoded": "",
+  "keypair": {},
+  "asset_id": ""
 }

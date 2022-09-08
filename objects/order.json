@@ -16,7 +16,6 @@
   "total": 18.42,
   "status": "Submitted",
   "timePlaced": "2022-03-15T17:32:00",
-  "sessionId": "SESS1",
   "foods": [
     {
       "_id": "ITEM1",
@@ -26,12 +25,14 @@
       "img": "https://static.onecms.io/wp-content/uploads/sites/19/2018/05/21/chicken-fried-rice-burrito-dcms-large-image-2000.jpg",
       "desc": "soft, warm tortilla wrapped to contain a number of fillings including rice, beans and chicken or beef.",
       "options": [
-        { "name": "corn", "price": 0.5, "selected": false },
-        { "name": "salsa", "price": 0.5, "selected": true },
-        { "name": "cheese", "price": 0.0, "selected": false }
+        { "name": "corn", "price": 0.5 },
+        { "name": "salsa", "price": 0.5 },
+        { "name": "cheese", "price": 0.0 }
       ],
       "price": 10.31,
       "restaurantID": "REST1"
     }
-  ]
+  ],
+  "keypair": {},
+  "asset_id": ""
 }

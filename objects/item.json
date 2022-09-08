@@ -1,15 +1,29 @@
 {
   "_id": "ITEM1",
-  "name": "Burrito",
-  "size": "large",
+  "restaurantID": "REST1",
+  "title": "Mixed Burrito",
   "category": "Mains",
-  "img": "https://static.onecms.io/wp-content/uploads/sites/19/2018/05/21/chicken-fried-rice-burrito-dcms-large-image-2000.jpg",
   "description": "soft, warm tortilla wrapped to contain a number of fillings including rice, beans and chicken or beef.",
+  "price": 10.31,
+  "photoUrl": "https://static.onecms.io/wp-content/uploads/sites/19/2018/05/21/chicken-fried-rice-burrito-dcms-large-image-2000.jpg",
+  "isPickupOnly": false,
   "options": [
-    { "name": "corn", "price": "0.50", "selected": false },
-    { "name": "salsa", "price": "0.50", "selected": true },
-    { "name": "cheese", "price": "0.00", "selected": false }
+    {
+        "title": "Choose your tortilla",
+        "limit": 1,
+        "isOptional": false,
+        "options": [
+            {
+                "title": "Whole Wheat Tortilla",
+                "price": 0
+            },
+            {
+                "title": "White Tortilla",
+                "price": 0
+            }
+        ]
+    }
   ],
-  "price": "10.31",
-  "restaurantID": "REST1"
+  "keypair": {},
+  "asset_id": ""
 }
