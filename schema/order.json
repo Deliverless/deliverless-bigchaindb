@@ -1,0 +1,16 @@
+{
+  "userID": "",
+  "driverID": "",
+  "restaurantID": "",
+  "transactionID": "",
+  "deliveryID": "",
+  "status": "",
+  "discount": "",
+  "tax": "",
+  "driverFee": "",
+  "subtotal": "",
+  "total": "",
+  "timePlaced": "",
+  "sessionId": "",
+  "items": []
+}

@@ -1,0 +1,15 @@
+{
+  "role": "",
+  "firstName": "",
+  "lastName": "",
+  "birthday": "",
+  "password": "",
+  "email": "",
+  "addresses": [],
+  "isAdmin": false,
+  "phone": "",
+  "orderIds": [],
+  "encoded": "",
+  "images": [],
+  "keypair": {}
+}
