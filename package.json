@@ -1,13 +1,14 @@
 {
+  "type": "module",
   "name": "deliverless-bigchaindb",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "insert": "test"
   },
   "scripts": {
-    "test": "node tests/bigchaindb-driver.js"
+    "task": "node ./tasksfile.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,11 @@
     "url": "https://github.com/Deliverless/deliverless-bigchaindb/issues"
   },
   "homepage": "https://github.com/Deliverless/deliverless-bigchaindb#readme",
-  "devDependencies": {
-    "bigchaindb-driver": "^4.3.0"
+  "dependencies": {
+    "@babel/runtime": "^7.19.0",
+    "bigchaindb-driver": "^4.3.0",
+    "bigchaindb-orm": "^3.0.3",
+    "bookshelf": "0.9.2",
+    "tasksfile": "^5.1.1"
   }
 }
