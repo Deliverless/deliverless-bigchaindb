@@ -1,5 +1,11 @@
 import { sh, cli } from "tasksfile";
-import Orm from "./modules/js-driver-orm-master/src/index.js";
+import bigdb from 'bigchaindb-orm';
+const Orm = bigdb.default;
+import * as dotenv from 'dotenv' // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+dotenv.config()
+
+
+console.log(process.env.APP_VAR)
 
 import * as User from "./models/user.json" assert {type: 'json'};
 
@@ -14,7 +20,7 @@ const init = () => {
   const bdbOrm = new Orm("http://24.150.93.243:9984/api/v1/");
   bdbOrm.define("user", User);
   // create a public and private key for Alice
-  aliceKeypair = new bdbOrm.driver.Ed25519Keypair();
+  const aliceKeypair = new bdbOrm.driver.Ed25519Keypair();
 };
 
 cli({
