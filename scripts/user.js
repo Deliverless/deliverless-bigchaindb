@@ -1,89 +1,31 @@
-import userModel from "../models/user.json" assert { type: "json" };
-// import bigchaindb-orm
-import bigchaindb from "bigchaindb-orm";
-const Orm = bigchaindb.default;
-// connect to BigchainDB
-const bdbOrm = new Orm("http://24.150.93.243:9984/api/v1/");
+import BigchainDb from "./bigchaindb-orm.js";
+import bip39 from "bip39";
 
-bdbOrm.define("user", userModel);
-// 8dbFB2F32D24a41fb3219aE027e5d50F488C75c9 to base58
+const bigchaindb = new BigchainDb("http://24.150.93.243");
 
-const address = "8dbFB2F32D24anet41fb3219aE027e5d50F488C75c9";
-const addressBase58 = "8dbFB2F32D24a41fb3219aE027e5d50F488C75c9";
-
-const keypair = {
-  publicKey: "8dbFB2F32D24a41fb3219aE027e5d50F488C75c9",
-  privateKey: "8EmKudhRxZSpmZQ8aDzhDdfXrA2j2QsWGj2fbHQ5Lmdp",
-};
-
-const aliceKeypair = new bdbOrm.driver.Ed25519Keypair();
+const seed = bip39.mnemonicToSeedSync("candy maple cake sugar pudding cream honey rich smooth crumble sweet treat").slice(0, 32);
+const keypair = new bigchaindb.bdbOrm.driver.Ed25519Keypair(seed);
 
 const createUser = async () => {
-  // 8dbFB2F32D24a41fb3219aE027e5d50F488C75c9 the defined models in our bdbOrm we create an asset with Alice as owner
+  await bigchaindb.createObject('user', { firstName: 'Marcin', lastName: "Koziel", encoded: "marcinkoziel123" }, keypair, true);
+}
 
-  bdbOrm.models.user
-    .create({
-      keypair: keypair,
-      data: { firstName: "Marcin" },
-    })
-    .then((asset) => {
-      /*
-        asset is an object with all our data and functions
-        asset.id equals the id of the asset
-        asset.data is data of the last (unspent) transaction
-        asset.transactionHistory gives the full raw transaction history
-        Note: Raw transaction history has different object structure then
-        asset. You can find specific data change in metadata property.
-      */
-      console.log(asset.id);
-    });
-};
+const getUsers = async () => {
+  const users = await bigchaindb.getObjectsById('user', undefined, true);
+  console.log("users", users);
+}
 
-// // get all objects with retrieve()
-// // or get a specific object with retrieve(object.id)
-// bdbOrm.models.myModel.retrieve().then((assets) => {
-//   // assets is an array of myModel
-//   console.log(assets.map((asset) => asset.id));
-// });
+const searchUsersByMetadata = async () => {
+  const results = await bigchaindb.getObjectsByMetadata('user', "marcinkoziel123");
+  console.log("results", results);
+}
 
-// // create an asset with Alice as owner
-// bdbOrm.models.myModel
-//   .create({
-//     keypair: aliceKeypair,
-//     data: { key: "dataValue" },
-//   })
-//   .then((asset) => {
-//     // lets append update the data of our asset
-//     // since we use a blockchain, we can only append
-//     return asset.append({
-//       toPublicKey: aliceKeypair.publicKey,
-//       keypair: aliceKeypair,
-//       data: { key: "updatedValue" },
-//     });
-//   })
-//   .then((updatedAsset) => {
-//     // updatedAsset contains the last (unspent) state
-//     // of our asset so any actions
-//     // need to be done to updatedAsset
-//     console.log(updatedAsset.data);
-//   });
+const appendUserData = async () => {
+  await bigchaindb.appendToObject('user', 'id:global:user:72db7335-5fc8-4697-ba11-283415aaf26f', { firstName: 'Koziel', lastName: "Marcin" }, keypair, true);
+}
 
-// // create an asset with Alice as owner
-// bdbOrm.models.myModel
-//   .create({
-//     keypair: aliceKeypair,
-//     data: { key: "dataValue" },
-//   })
-//   .then((asset) => {
-//     // lets burn the asset by assigning to a random keypair
-//     // since will not store the private key it's infeasible to redeem the asset
-//     return asset.burn({
-//       keypair: aliceKeypair,
-//     });
-//   })
-//   .then((burnedAsset) => {
-//     // asset is now tagged as "burned"
-//     console.log(burnedAsset.data);
-//   });
+const burnUser = async () => {
+  await bigchaindb.burnObject('user', 'id:global:user:72db7335-5fc8-4697-ba11-283415aaf26f', keypair, true);
+}
 
-// export { createUser };
+export { createUser, getUsers, searchUsersByMetadata, appendUserData, burnUser };
