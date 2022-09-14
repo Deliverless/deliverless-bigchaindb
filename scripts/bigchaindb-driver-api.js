@@ -1,9 +1,9 @@
 
 
-const driver = require('bigchaindb-driver')
-const base58 = require('bs58');
-const crypto = require('crypto');
-const { Ed25519Sha256 } = require('crypto-conditions');
+import driver from 'bigchaindb-driver';
+import base58 from 'bs58';
+import crypto from 'crypto';
+// const { Ed25519Sha256 } = require('crypto-conditions');
 
 // BigchainDB server instance (e.g. https://example.com/api/v1/)
 const API_PATH = 'http://24.150.93.243:9984/api/v1/'
@@ -19,7 +19,7 @@ const tx = driver.Transaction.makeCreateTransaction(
 
     // Metadata contains information about the transaction itself
     // (can be `null` if not needed)
-    { what: 'My first BigchainDB transaction' },
+    { what: 'Test' },
 
     // A transaction needs an output
     [ driver.Transaction.makeOutput(
