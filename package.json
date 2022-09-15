@@ -8,7 +8,7 @@
     "insert": "test"
   },
   "scripts": {
-    "task": "node ./tasksfile.js"
+    "tasks": "node ./tasksfile.js"
   },
   "repository": {
     "type": "git",

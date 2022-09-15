@@ -1,12 +1,11 @@
 import * as modelObjects from "../models/index.js";
-import driver from 'bigchaindb-driver'
 import bigchaindbOrm from "bigchaindb-orm";
 const models = modelObjects.default;
 const Orm = bigchaindbOrm.default;
 
 export default class BigchainDb {
 
-  models = modelObjects.default;
+  models = modelObjects.default; // JSON objects
   Orm = bigchaindbOrm.default;
 
   constructor(host, debug=false) {
