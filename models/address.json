@@ -5,5 +5,7 @@
   "country": "",
   "postal": "",
   "street": "",
-  "unit": ""
+  "unit": "",
+  "lat": "",
+  "lon": ""
 }
