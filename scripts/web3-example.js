@@ -1,4 +1,6 @@
 import Web3 from 'web3';
+import bip39 from 'bip39';
+import BigchainDb from "./bigchaindb-orm.js";
 import * as abiIndex from '../abi/index.js';
 import * as contracts from '../contracts/index.js';
 const abi = abiIndex.default;
@@ -16,6 +18,11 @@ console.log('account loaded successfuly and balance is:', balance);
 // bigchaindb address '../contracts/bigchaindb.json'
 const address = contractObjects.bigchaindb.address;
 
+// intialize the bigchaindb orm just for keypair
+// TODO: remove this and use web3 to generate keypair (requires testing)
+const bigchaindb = new BigchainDb("http://24.150.93.243");
+const seed = bip39.mnemonicToSeedSync('candy maple cake sugar pudding cream honey rich smooth crumble sweet treat').slice(0, 32)
+const keypair = new bigchaindb.bdbOrm.driver.Ed25519Keypair(seed)
 
 // creates new object in the database
 const createNewObject = async (modelName, metadataJson) => {
@@ -108,12 +115,22 @@ const printResult = async (receipt, contract) => {
 // specify object properties 
 // *** REFERENCE deliverless-chainlink/adapters/bigchaindb-utils/models ***
 const metadataObject = {
-  "encoded": "encodeduserpass",
-};
+  "role": "admin",
+  "firstName": "marcin",
+  "lastName": "koziel",
+  "birthday": "1990-01-01",
+  "email": "koziel@sheridancollege.ca",
+  "addresses": [],
+  "phone": "647-123-4567",
+  "orderIds": [],
+  "encoded": "sheridanuser",
+  "images": [],
+  "keypair": keypair
+}
 
 
 // createNewObject('user', metadataObject);
 // getObjectById('user', 'id:global:user:c1552c51-bccc-4ff7-ac60-a4b7cd78e40e');
 // findObjectByMetadata('user', metadataObject);
-// updateObject('user', 'id:global:user:c1552c51-bccc-4ff7-ac60-a4b7cd78e40e', metadataObject);
+updateObject('user', 'id:global:user:835249bc-14d3-4210-a10f-5abacdd9b4d6', metadataObject);
 // deleteObject('user', 'id:global:user:c1552c51-bccc-4ff7-ac60-a4b7cd78e40e');
