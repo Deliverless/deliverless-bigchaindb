@@ -4,7 +4,7 @@ import * as contracts from '../contracts/index.js';
 const abi = abiIndex.default;
 const contractObjects = contracts.default;
 
-// *** ref objects dir: deliverless-chainlink/adapters/bigchaindb-utils/objects ***
+// *** REFERENCE objects dir: deliverless-chainlink/adapters/bigchaindb-utils/models ***
 
 // create a new user using web3
 const web3 = new Web3('http://24.150.93.243:8546');
@@ -106,7 +106,7 @@ const printResult = async (receipt, contract) => {
 }
 
 // specify object properties 
-// *** REFERENCE deliverless-chainlink/adapters/bigchaindb-utils/objects ***
+// *** REFERENCE deliverless-chainlink/adapters/bigchaindb-utils/models ***
 const metadataObject = {
   "encoded": "encodeduserpass",
 };
