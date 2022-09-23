@@ -62,7 +62,7 @@ export default class BigchainDb {
     // or get a specific object with retrieve(object.id)
     this.bdbOrm.models[model].retrieve(assetId).then((assets) => {
       // assets is an array of myModel
-      if (debug) console.log(assets.map((asset) => asset.id));
+      if (debug) console.log(assets);
       return assets;
     });
   };

@@ -22,7 +22,7 @@ const createUser = async () => {
  * @date 2022-09-14
  */
 const getUsers = async () => {
-  await bigchaindb.getObjectsById('user', undefined, true);
+  await bigchaindb.getObjectsById('user', "id:global:user:72db7335-5fc8-4697-ba11-283415aaf26f", true);
 }
 
 /**
