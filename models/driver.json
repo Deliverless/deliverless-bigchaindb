@@ -1,6 +1,6 @@
 {
   "vehicleId": "",
   "rating": "",
-  "driver-phone": "",
-  "work-reviews": []
+  "reviewIds": [],
+  "userId": ""
 }

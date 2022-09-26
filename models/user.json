@@ -4,9 +4,8 @@
   "lastName": "",
   "birthday": "",
   "email": "",
-  "addresses": [],
+  "addressIds": [],
   "phone": "",
-  "orderIds": [],
   "encoded": "",
   "images": [],
   "keypair": {}

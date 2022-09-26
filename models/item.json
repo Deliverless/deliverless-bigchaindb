@@ -8,6 +8,7 @@
   "price": "",
   "quantity": "",
   "discount": "",
-  "is-pickup-only": false,
-  "is-available": false
+  "isPickupOnly": false,
+  "isAvailable": false,
+  "restaurantId": ""
 }

@@ -10,9 +10,9 @@
     "Friday": "",
     "Saturday": ""
   },
-  "items": [],
+  "itemIds": [],
   "rating": "",
-  "reviews": [],
+  "reviewIds": [],
   "image": "",
   "keypair": {}
 }
