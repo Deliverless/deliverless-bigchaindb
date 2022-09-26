@@ -3,10 +3,8 @@
   "driverId": "",
   "restaurantId": "",
   "transactionId": "",
-  "delivery": {
-    "addressId": "",
-    "is-pickup": ""
-  },
+  "addressId": "",
+  "isPickup": "",
   "status": "",
   "discount": "",
   "tax": "",
@@ -14,6 +12,5 @@
   "subtotal": "",
   "total": "",
   "timestamp": "",
-  "sessionId": "",
   "items": []
 }
