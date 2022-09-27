@@ -6,5 +6,6 @@
   "color": "",
   "numberOfPassengers": "",
   "image": "",
-  "description": ""
+  "description": "",
+  "keypair": {}
 }

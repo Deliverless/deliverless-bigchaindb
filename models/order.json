@@ -12,5 +12,6 @@
   "subtotal": "",
   "total": "",
   "timestamp": "",
-  "items": []
+  "items": [],
+  "keypair": {}
 }

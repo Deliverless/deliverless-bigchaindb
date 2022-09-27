@@ -10,5 +10,6 @@
   "discount": "",
   "isPickupOnly": false,
   "isAvailable": false,
-  "restaurantId": ""
+  "restaurantId": "",
+  "keypair": {}
 }
