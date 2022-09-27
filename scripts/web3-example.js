@@ -1,6 +1,5 @@
 import Web3 from 'web3';
 import bip39 from 'bip39';
-import base64 from 'base-64';
 import BigchainDb from "./bigchaindb-orm.js";
 import * as abiIndex from '../abi/index.js';
 import * as contracts from '../contracts/index.js';
@@ -91,12 +90,12 @@ const requestResponse = async (requestId) => {
   const operatorContract = new web3.eth.Contract(abi.abiOperator, operatorAddress);
   const events = await new Promise((resolve, reject) => {
     setTimeout(async () => {
-      for (let i = 0; i < 60/0.3; i++) {
+      for (let i = 0; i < 60 / 0.3; i++) {
         const results = await operatorContract.getPastEvents(
           'DeliverlessRequest',
           {
             fromBlock: 0,
-            filter: { requestId: String(requestId) } 
+            filter: { requestId: String(requestId) }
           }
         );
         if (results.length > 0) {
@@ -120,7 +119,7 @@ const requestResponse = async (requestId) => {
     const parsedResponse = JSON.parse(extractText);
     return parsedResponse;
   } else {
-    {}
+    { }
   }
 }
 
