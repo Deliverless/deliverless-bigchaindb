@@ -1,15 +1,16 @@
 {
+  "restaurantId": "",
   "name": "",
   "description": "",
   "size": "",
   "category": "",
-  "imgs": [],
+  "images": [],
   "options": [],
   "price": "",
   "quantity": "",
   "discount": "",
   "isPickupOnly": false,
   "isAvailable": false,
-  "restaurantId": "",
+  "options": [],
   "keypair": {}
 }

@@ -1,16 +1,56 @@
 {
   "name": "",
-  "addressId": "",
-  "hours": {
-    "Sunday": "",
-    "Monday": "",
-    "Tuesday": "",
-    "Wednesday": "",
-    "Thursday": "",
-    "Friday": "",
-    "Saturday": ""
+  "cuisine": "",
+  "address": {
+    "type": "",
+    "local": "",
+    "region": "",
+    "country": "",
+    "postal": "",
+    "street": "",
+    "unit": "",
+    "lat": "",
+    "lon": ""
   },
-  "itemIds": [],
+  "hours": {
+    "sunday": "",
+    "monday": "",
+    "tuesday": "",
+    "wednesday": "",
+    "thursday": "",
+    "friday": "",
+    "saturday": ""
+  },
+  "menu": {
+    "0": {
+      "name": "burgers",
+      "itemIds": {
+        "0": {
+          "id": "id:global:item:7e378e76-ed18-48a8-9009-cdd55960a5e0"
+        },
+        "1": {
+          "id": "id:global:item:63330d92-4f48-4a12-9994-dda8f1de1334"
+        }
+      }
+    },
+    "1": {
+      "name": "sides",
+      "itemIds": {
+        "0": {
+          "id": "id:global:item:3cb3a7ce-3184-4927-aae9-e2934febcfbf"
+        }
+      }
+      
+    },
+    "2": {
+      "name": "beverages",
+      "itemIds": {
+        "0": {
+          "id": "id:global:item:eef17eaa-265e-4884-8885-724955cd56d5"
+        }
+      }
+    }
+  },
   "rating": "",
   "reviewIds": [],
   "image": "",
